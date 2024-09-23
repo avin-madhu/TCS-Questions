@@ -1,4 +1,5 @@
-# total cost of joining arrays
+# total cost of joining wires
+
 wires = [4,3,2,6,7]
 total_cost = 0
 
