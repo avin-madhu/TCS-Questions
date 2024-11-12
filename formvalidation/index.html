@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <form>
+        Name: <input id="name" type="text" name="text">
+        Age: <input id="age" type="number" name="number"><br><br>
+        <button type="submit" onclick="check_data()">Submit Data</button>
+    </form>
+
+    <script>
+
+        function check_data(){
+            age_element = parseInt(document.getElementById('age').value)
+            console.log(age_element)
+            if (age_element < 18){
+                event.preventDefault();
+                alert("below 18");
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
