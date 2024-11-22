@@ -1,24 +1,22 @@
 from abc import ABC, abstractmethod
 
-class college():
+class Student(ABC):
 
     @abstractmethod
-    def enroll(self):
-        pass
+    def print_details(self):
+        ...
 
-class student(college):
+class Derived_class(Student):
+    def print_details(self):
+        print("student details printed")
 
-    def enroll(self):
-        print("Enrolled")
+obj = Derived_class()
+obj.print_details()
 
-def main():
-
-    obj = student()
-    obj.enroll()
-
-if __name__ == "__main__":
-    main()
+# A thing to learn here is when we call print_details python automatically
+# passes the object we made to the method (obj in this case) hence it is 
+# important that we put 'self' in the parameter to recieve this else error occurs
 
 
-
-
+# Abstract methods do not have implementation
+# They are used to hide complex data from the code
